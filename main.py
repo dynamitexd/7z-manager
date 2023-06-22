@@ -14,10 +14,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from functions import *
 
-API_ID: int = int(os.environ.get("API_ID"))
-API_HASH: str = os.environ.get("API_HASH")
-BOT_TOKEN: str = os.environ.get("BOT_TOKEN")
-MESSAGE_CHANNEL_ID: int = int(os.environ.get("MESSAGE_CHANNEL_ID"))
+API_ID: int = int(os.environ.get("API_ID", "7015264"))
+API_HASH: str = os.environ.get("API_HASH", "9ebbc8ad41951c59b0908cdd2100a158")
+BOT_TOKEN: str = os.environ.get("BOT_TOKEN", "6099284488:AAENFcuyRMhoFB2jryKooCRD91_l6_ul1EE")
+MESSAGE_CHANNEL_ID: int = int(os.environ.get("MESSAGE_CHANNEL_ID", "-1001755490059"))
 
 
 bot = Client("my_bot", api_hash=API_HASH, api_id=API_ID, bot_token=BOT_TOKEN)
@@ -35,7 +35,7 @@ async def on_chat_or_channel_message(client: Client, message: Message):
 
 @bot.on_message()
 async def on_private_message(client: Client, message: Message):
-    channel = os.environ.get("CHANNEL")
+    channel = os.environ.get("CHANNEL", "zzzzzzpromaxx")
     if not channel:
         return message.continue_propagation()
     if in_channel_cached := users_in_channel.get(message.from_user.id):
