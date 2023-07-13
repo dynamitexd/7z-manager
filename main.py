@@ -16,7 +16,7 @@ from functions import *
 
 API_ID: int = int(os.environ.get("API_ID", "7015264"))
 API_HASH: str = os.environ.get("API_HASH", "9ebbc8ad41951c59b0908cdd2100a158")
-BOT_TOKEN: str = os.environ.get("BOT_TOKEN", "6099284488:AAENFcuyRMhoFB2jryKooCRD91_l6_ul1EE")
+BOT_TOKEN: str = os.environ.get("BOT_TOKEN", "5856560370:AAEjkWcs9dLhcFFRYgZ0uYuZYGALpr0A224")
 MESSAGE_CHANNEL_ID: int = int(os.environ.get("MESSAGE_CHANNEL_ID", "-1001755490059"))
 
 
