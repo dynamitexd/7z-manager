@@ -1,4 +1,4 @@
-Pyrogram~=2.0.29
+Pyrogram==2.0.29
 TgCrypto==1.2.3
 multivolumefile==0.2.3
 py7zr==0.18.9
